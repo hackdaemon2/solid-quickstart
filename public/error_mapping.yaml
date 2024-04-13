@@ -1,0 +1,244 @@
+errorResponseMappers:
+  - code: 600
+    description: "^Invalid JSON request passed\\.$"
+    checkoutDescription: "Invalid JSON request, incorrect parameters or values passed. Checkout to review the JSON"
+  - code: 601
+    description: "^Failed to find matching merchantIndustryCode\\(.+\\) with serviceCode\\(.+\\)$"
+    checkoutDescription: "Failed to find matching merchantIndustryCode(%s) with serviceCode(%s). Checkout to review the service configuration and MCC"
+  - code: 602
+    description: "^Invalid payment token passed$"
+    checkoutDescription: "Invalid payment token passed. Merchant to review and send correct token"
+  - code: 603
+    description: "^Acquirer services settings not found$"
+    checkoutDescription: "Acquirer services settings not found. CDE to review acquirer configuration"
+  - code: 604
+    description: "^Duplicate requestCorrelationID or requestReferenceID$"
+    checkoutDescription: "Duplicate requestCorrelationID or requestReferenceID. CDE to review the requestReferenceID/requestCorrelationID "
+  - code: 606
+    description: "^Card request not saved$"
+    checkoutDescription: "Card request not saved. CDE  to review and rectify"
+  - code: 608
+    description: "^Failure reason not found. Unable to initiate authentication$"
+    checkoutDescription: "3DS Authentication failed, unable to redirect customer to card issuer page. Retry with a different card"
+  - code: 608
+    description: "^Authenticate payer failed$"
+    checkoutDescription: "3DS Authentication failed, unable to redirect customer to card issuer page. Retry with a different card"
+  - code: 686
+    description: "^Authenticate request types must have secure3D flag set to true$"
+    checkoutDescription: "Authenticate request types must have secure3D flag set to true"
+  - code: 609
+    description: "^Please provide card details for this transaction\\.$"
+    checkoutDescription: "Token not allowed for 3DS transaction"
+  - code: 610
+    description: "^Unable to complete the payment\\. Please try again$"
+    checkoutDescription: "UNABLE_TO_COMPLETE_THE_PAYMENT"
+  - code: 610
+    description: "^Unable to complete the payment\\. Please try again$"
+    checkoutDescription: "UNABLE_TO_COMPLETE_THE_PAYMENT"
+  - code: 687
+    description: "^Request method for this resource is not allowed\\.$"
+    checkoutDescription: "Invalid request method: Method should be %s"
+  - code: 611
+    description: "^Payment Declined\\. Your card is not 3DS Enabled\\. Contact your bank\\."
+    checkoutDescription: "Payment Declined. Your card is not 3DS Enabled. Contact your bank."
+  - code: 613
+    description: "^Invalid merchant industry code passed or account not configured for this request type$"
+    checkoutDescription: "Checkout to review the merchantIndustryCode passed or request type configured for the user account on CDE"
+  - code: 615
+    description: "^Currency code mismatch$"
+    checkoutDescription: "Currency code mismatch. Retry the refund or capture with currency of the original transaction"
+  - code: 616
+    description: "^Token not found$"
+    checkoutDescription: "Token not found. Retry with a valid token "
+  - code: 617
+    description: "^Duplicate reference number$"
+    checkoutDescription: "Duplicate reference number. Re-initiate transaction with a unique Merchant transaction ID"
+  - code: 618
+    description: "^Invalid request correlation id$"
+    checkoutDescription: "Invalid request correlation id. CDE to review and rectify"
+  - code: 689
+    description: "^Invalid amount passed\\.$"
+    checkoutDescription: "Invalid amount format. Amount must be a numeric value"
+  - code: 619
+    description: "^Unable to locate transaction with reference .+$"
+    checkoutDescription: "Unable to locate transaction with reference %s. CDE to review and rectify"
+  - code: 610
+    description: "^Unable to complete the request\\. Unknown request type$"
+    checkoutDescription: "Unable to complete the payment. Please try again"
+  - code: 622
+    description: "^Request Timed-out$"
+    checkoutDescription: "Request Timed-out. CDE to review and rectify"
+  - code: 623
+    description: "^Request location not found\\.$"
+    checkoutDescription: "Request location not found. CDE to review and rectify endpoint"
+  - code: 625
+    description: "^Invalid isCvvLess passed$"
+    checkoutDescription: "Invalid isCvvLess passed. Checkout to send boolean value"
+  - code: 688
+    description: "^Cache connection failure\\.$"
+    checkoutDescription: "Unable to connect to redis"
+  - code: 626
+    description: "^Invalid secure3D passed$"
+    checkoutDescription: "Invalid secure3D passed. Checkout to send boolean value"
+  - code: 627
+    description: "^Unreadable message format\\.+$"
+    checkoutDescription: "Unreadable message format, JSON expected instead of string. Checkout to review and rectify"
+  - code: 628
+    description: "^Error in request processing$"
+    checkoutDescription: "Error in request processing due to application error. CDE to review and rectify"
+  - code: 629
+    description: "^Transaction blocked due to risk\\.+$"
+    checkoutDescription: "Transaction blocked due to suspected fraud. Contact card issuer for support"
+  - code: 690
+    description: "^Invalid or expired token$"
+    checkoutDescription: "Failed to authenticate. Invalid or expired authentication token"
+  - code: 630
+    description: "^accountID field in extraData property should be provided$"
+    checkoutDescription: "Missing accountID. accountID field in extraData property should be provided"
+  - code: 631
+    description: "^please provide the card number$"
+    checkoutDescription: "Missing card number. Please provide the card number"
+  - code: 632
+    description: "^please provide the card expiry field$"
+    checkoutDescription: "Missing card expiry field. Please provide the card expiry field"
+  - code: 633
+    description: "^please provide the card expiry month field$"
+    checkoutDescription: "Missing card expiry month field. Please provide the card expiry month field"
+  - code: 634
+    description: "^please provide the card expiry year field$"
+    checkoutDescription: "Missing card expiry year field. Please provide the card expiry year field"
+  - code: 635
+    description: "^Delete token request timed out\\. Please try again$"
+    checkoutDescription: "Delete token request timed out. Please try again"
+  - code: 636
+    description: "^Reference \\[.+\\] must be a numeric value$"
+    checkoutDescription: "Invalid reference format. Reference [%s] must be a numeric value"
+  - code: 637
+    description: "^Invalid Country Code passed$"
+    checkoutDescription: "Invalid Country Code passed. Please provide the correct country code"
+  - code: 638
+    description: "^secure3D field in request should be set to false$"
+    checkoutDescription: "Request type mismatch. secure3D field in request should be set to false"
+  - code: 639
+    description: "^Unable to encrypt value passed for source of funds$"
+    checkoutDescription: "Unable to encrypt value passed for source of funds. CDE to review"
+  - code: 640
+    description: "^Invalid encrypted value passed for source of funds$"
+    checkoutDescription: "Invalid encrypted value passed for source of funds. Checkout to review"
+  - code: 641
+    description: "^invalid requestCorrelationID value passed for .+ requestType$"
+    checkoutDescription: "Missing requestCorrelationID. Please provide requestCorrelationID"
+  - code: 642
+    description: "^Customer email is required$"
+    checkoutDescription: "Customer email is required"
+  - code: 644
+    description: "^Invalid card BIN passed$"
+    checkoutDescription: "Invalid card BIN format. Value should be numeric"
+  - code: 645
+    description: "^Unable to parse JSON response\\.$"
+    checkoutDescription: "Error in HTTP response parsing"
+  - code: 646
+    description: "^missing request parameters$"
+    checkoutDescription: "Missing request parameters. "
+  - code: 647
+    description: "^card BIN is required$"
+    checkoutDescription: "Card BIN is required"
+  - code: 648
+    description: "^Invalid card BIN length passed$"
+    checkoutDescription: "Invalid card BIN length passed"
+  - code: 644
+    description: "^card BIN must be numeric$"
+    checkoutDescription: "Invalid card BIN format. Value should be numeric"
+  - code: 631
+    description: "^card number is required$"
+    checkoutDescription: "Missing card number. Please provide the card number"
+  - code: 651
+    description: "^Please provide card number for card tokenization requests$"
+    checkoutDescription: "Missing card number. Please provide card number for card tokenization requests"
+  - code: 652
+    description: "^valid values for card profile identifier are: MSISDN, EMAIL$"
+    checkoutDescription: "Incorrect card profile identifier value. Valid values for card profile identifier are: MSISDN, EMAIL"
+  - code: 654
+    description: "^Invalid requestType passed for 3DS transaction$"
+    checkoutDescription: "Invalid requestType. Refund transaction can not be a 3DS transaction"
+  - code: 655
+    description: "^Card PIN must be four \\(4\\) digit\\(s\\)$"
+    checkoutDescription: "Incorrect card pin length. Card PIN must be four (4) digit(s)"
+  - code: 656
+    description: "^card details or CVV is required$"
+    checkoutDescription: "UNSUPPORTED_REQUEST_TYPE"
+  - code: 656
+    description: "^CVV is required$"
+    checkoutDescription: "UNSUPPORTED_REQUEST_TYPE"
+  - code: 659
+    description: "^Source of funds must be provided$"
+    checkoutDescription: "Missing Source of funds value: Source of funds must be provided"
+  - code: 660
+    description: "^Invalid card length for .+ scheme: Expected card length: .+$"
+    checkoutDescription: "Invalid card length %s scheme. %s card length should be %s"
+  - code: 661
+    description: "^Invalid card type$"
+    checkoutDescription: "Invalid card PAN. Retry with correct card PAN"
+  - code: 662
+    description: "^Expiry year must be 2 digits$"
+    checkoutDescription: "Incorrect Expiry year length. Expiry year must be 2 digits"
+  - code: 663
+    description: "^Expiry month must be 2 digits$"
+    checkoutDescription: "Incorrect Expiry month length. Expiry month must be 2 digits"
+  - code: 664
+    description: "^Expiry month is invalid$"
+    checkoutDescription: "Incorrect Expiry month. Expiry month must be value must be between 1 and 12"
+  - code: 665
+    description: "^Expiry year is invalid$"
+    checkoutDescription: "Incorrect Expiry year. Expiry month must be value must be between 0 and 99"
+  - code: 656
+    description: "^Please provide the Card Verification Value$"
+    checkoutDescription: "UNSUPPORTED_REQUEST_TYPE"
+  - code: 667
+    description: "^Card Verification Value must be a numeric value between 3 and 4 digits$"
+    checkoutDescription: "Invalid CVV format. Card Verification Value must be a numeric value between 3 and 4 digits"
+  - code: 668
+    description: "^BIN passed in card issuer information does not match card BIN$"
+    checkoutDescription: "BIN passed in card issuer information does not match card BIN"
+  - code: 644
+    description: "^Unable to identify card BIN$"
+    checkoutDescription: "BIN passed in card issuer information does not match card BIN"
+  - code: 671
+    description: "^card details is not required for delete token requests$"
+    checkoutDescription: "Card details is not required for delete token requests. Send only token"
+  - code: 672
+    description: "^token is required delete token requests$"
+    checkoutDescription: "Missing token. Token is required delete token requests"
+  - code: 673
+    description: "cardPin is required for VERVE Cards"
+    checkoutDescription: "Missing card pin. cardPin is required for VERVE Cards"
+  - code: 675
+    description: "^tokenizeCard should be set to false$"
+    checkoutDescription: "Unsupported request type. Set tokenizeCard flag to false"
+  - code: 661
+    description: "^invalid card number passed$"
+    checkoutDescription: "Invalid card PAN. Retry with correct card PAN"
+  - code: 679
+    description: "^invalid request type$"
+    checkoutDescription: "Invalid request type: Request type should be one of the following: AUTHENTICATE, AUTHORIZE, CAPTURE, VOID, REVERSAL. CHARGE, REFUND, DELETE"
+  - code: 600
+    description: "^Format Error Occurred$"
+    checkoutDescription: "Invalid JSON request, incorrect parameters or values passed. Checkout to review the JSON"
+  - code: 681
+    description: "^Unable to initiate request due to broker error$"
+    checkoutDescription: "Unable to publish 2D request to the messaging queue. CDE to review"
+  - code: 682
+    description: "^Unable to determine a risk-management decision$"
+    checkoutDescription: "Invalid response from fraud tool. Unable to determine a risk-management decision"
+  - code: 683
+    description: "^unable to get merchant configuration$"
+    checkoutDescription: "Invalid response from transaction manager tool. Unable to get merchant configuration"
+  - code: 684
+    description: "^Unable to get card issuer data$"
+    checkoutDescription: "Invalid response from bin lookup tool. Unable to get card issuer data"
+  - code: 645
+    description: "^Unable to get card BIN data$"
+    checkoutDescription: "Error in HTTP response parsing"
+  - code: 209
+    description: "^Card expiry date is invalid$"
+    checkoutDescription: "Transaction failed due to expired card. Please retry with a valid card"
